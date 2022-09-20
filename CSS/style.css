@@ -1,0 +1,157 @@
+:root{ 
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+img{
+    max-width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+    height: 100vh;
+    margin: 1px auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.images{
+    width: 30rem;
+    height: 50rem;
+}
+
+.images img{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+
+}
+.image-mobile{
+    display: none;
+}
+.card{
+    background: var(--White);
+    padding:2.5rem;
+    width: 30rem;
+    height: 50rem;
+    display: grid ;
+    border-radius: 0 8px 8px 0;
+}
+
+.card h1{
+    font-family: 'fraunces', monospace;
+    font-size: 3.5rem;
+    color: var(--Very-dark-blue);
+}
+
+.card h4{
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.card_price{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.card_price h1{
+    color: var(--Dark-cyan);
+    font-family: 'fraunces', monospace;
+    
+}
+button{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    background: var(--Dark-cyan);
+    color: var(--White);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+ button:hover{
+    background: hsl(159, 46%, 7%);
+ }
+.cart img{
+    height: 25px;
+    width: 25px;
+}
+
+.attribution{
+    text-align: center;
+    font-size: small;
+    margin-top: 3rem;
+}
+
+@media (max-width:428px) {
+    .main{
+        max-width: 1300px;
+        padding: 24px;
+    }
+
+    .container{
+        display: block;
+        height: none;
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+
+    }
+
+    .images{
+       width: 100%;
+       height: 100%;
+    }
+
+    .image-desktop{
+        display: none;
+    }
+
+    .image-mobile{
+        display: block;
+    }
+
+    .images img{
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card{
+        padding: 2rem;
+        width: 100%;
+        max-height: 100%;
+        display: grid;
+        border-radius: 0 0 8px 8px;
+    }
+    .card_price{
+        gap: 1.5rem;
+    }
+    
+    .attribution{
+        margin-top: 2rem;
+        font-size: small;
+    }
+
+}
